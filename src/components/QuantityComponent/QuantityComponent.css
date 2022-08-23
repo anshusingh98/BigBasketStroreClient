@@ -1,0 +1,43 @@
+
+
+.change-qty{
+    width:70%;
+    height: 23px;
+    border-radius: 3px;
+    margin: 5px 0px 0px 0px;
+    display: flex;
+    padding: 0px;
+}
+.change-qty p {
+    margin: 0px;
+    font-weight: 500;
+}
+
+.show-qty{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+
+
+.qty-button{
+    width:30%;
+    background-color: #f0f1f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   
+}
+.qty-button p{
+    margin: 0px;
+    font-weight: 600;
+}
+
+.qty-button:hover{
+    background-color: #84C225;
+    color:#f0f1f0
+}
