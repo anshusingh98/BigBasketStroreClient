@@ -153,22 +153,14 @@ export const Footer = () => {
               rel="noreferrer"
               href="https://play.google.com/store/apps/details?id=com.bigbasket.mobileapp"
             >
-              <img
-                className={styles.badge}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/Google-App-store-icon.png?raw=true"
-                alt="img of google play store"
-              />
+              
             </a>
             <a
               target="_blank"
               rel="noreferrer"
               href="https://www.bbassets.com/static/v2530/custPage/build/content/img/Apple-App-store-icon.png"
             >
-              <img
-                className={styles.badge}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/Apple-App-store-icon.png?raw=true"
-                alt="img of apple store"
-              />
+            
             </a>
           </ul>
         </div>
@@ -182,44 +174,28 @@ export const Footer = () => {
                 rel="noreferrer"
                 href="https://www.facebook.com/pages/Bigbasketcom/139311472851666"
               >
-                <img
-                  className={styles.socialbadge}
-                  src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/facebook.png?raw=true"
-                  alt=""
-                />
+               
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://in.pinterest.com/bigbasketcom/"
               >
-                <img
-                  className={styles.socialbadge}
-                  src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/pinterest.png?raw=true"
-                  alt=""
-                />
+                
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://twitter.com/Bigbasket_com"
               >
-                <img
-                  className={styles.socialbadge}
-                  src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/twitter.png?raw=true"
-                  alt=""
-                />
+               
               </a>
               <a
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.instagram.com/bigbasketcom/"
               >
-                <img
-                  className={styles.socialbadge}
-                  src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/instagram.png?raw=true"
-                  alt=""
-                />
+                
               </a>
             </li>
           </ul>
@@ -279,45 +255,7 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-        <div>
-          <div>
-            <h4>PAYMENT OPTIONS:</h4>
-          </div>
-          <div className={styles.paymentIconDiv}>
-            <div>
-              <img
-                className={styles.paymentVisa}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/visa.png?raw=true"
-                alt=""
-              />
-              <img
-                className={styles.paymentMaster}
-                src="https://raw.githubusercontent.com/Prashant-Sharma-TWS/big-basket/1c52c14fc833f75b9fd759b201b4906a4848302c/frontend/src/Images/MasterCard_Logo.svg"
-                alt=""
-              />
-              <img
-                className={styles.paymentPaytm}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/paytm.png?raw=true"
-                alt=""
-              />
-              <img
-                className={styles.paymentMobi}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/mobikwik.png?raw=true"
-                alt=""
-              />
-              <img
-                className={styles.paymentRupay}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/Rupay.png?raw=true"
-                alt=""
-              />
-              <img
-                className={styles.paymentAmerican}
-                src="https://github.com/Prashant-Sharma-TWS/big-basket/blob/master/frontend/src/Images/logo-american-express-icon-text-word-symbol-graphics-transparent-png-203306.png?raw=true"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );

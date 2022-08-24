@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Card from '../../components/Card/Card'
-import Slide, { Slider } from '../../components/Slide/Slider'
+import  { Slider } from '../../components/Slide/Slider'
 import { loadProductAsync } from '../../redux/middleware/middleware'
 import "./bodysection.css"
 const BodyContainer = () => {
-    const {isLoading , products , errorMessage,category} = useSelector(state => state.products)
+    const {  products ,category} = useSelector(state => state.products)
    const dispatch =  useDispatch()
    useEffect(()=>{
      dispatch(loadProductAsync(category));
@@ -28,12 +28,30 @@ const BodyContainer = () => {
     </div>
     <div style={{display:"grid", gridTemplateColumns:"100%"}}>
     <div className="container body-container  px-5">
-      <div className="row" style={{ 
-}} >
+      <div className="row"  >
+      <div className="col col-lg-2 col-xl-2  d-none d-lg-block d-xl-block blank-col" style={{paddingTop:"12vh",paddingLeft:"10vh"}}>
+
+        <h4 style={{fontSize:"2vh",color:"grey"}}>Bank Offers</h4>
+          <img
+            className="img-fluid"
+            src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/00100e4e-7dc9-4ad0-888a-b630f0e6597b/9b0da17e-0131-4d5b-a7d8-bbabe29e98b0/t1_hp_aff_m_paytm_360_11082022.jpg"
+            alt="offer"
+          />
+           <img
+            className="img-fluid"
+            src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/00100e4e-7dc9-4ad0-888a-b630f0e6597b/9b0da17e-0131-4d5b-a7d8-bbabe29e98b0/t1_hp_aff_m_rbl_360_110822.jpg"
+            alt="offer"
+          />
+           <img
+            className="img-fluid"
+            src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/00100e4e-7dc9-4ad0-888a-b630f0e6597b/9b0da17e-0131-4d5b-a7d8-bbabe29e98b0/t1_hp_aff_m_indus_360_110822.jpg"
+            alt="offer"
+          />
+        </div>
         <div className="col col-lg-10 col-xl-10 col-md-12 col-sm-12 col-xs-12 content-col " >
           <h3 style={{textTransform: "uppercase",fontSize:"3vh"}} >{category} </h3>
           <div className="all-products">
-            <i className="fa-solid fa-truck-moving"></i>
+            <i className="fa-solid fa-truck-moving" style={{color:"#84c225"}}></i>
             <p>All Products</p>
           </div>
           <hr className="solid" />

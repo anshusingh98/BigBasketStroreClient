@@ -52,7 +52,7 @@ const Card = ({ product }) => {
           </p>
           <div className="delivery">
             <i
-              style={{ fontSize: "20px", color: "grey" }}
+              style={{ fontSize: "20px", color: "#84c225" }}
               className="fa-solid fa-truck truck"
             ></i>
            

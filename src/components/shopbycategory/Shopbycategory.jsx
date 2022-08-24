@@ -2,13 +2,9 @@ import { ArrowDown } from "../header/HeaderElements";
 import { BiWallet } from "react-icons/bi";
 import { CategoryDiv, ShopByCategorySection } from "../header/HeaderElements";
 import { useDispatch } from "react-redux";
-import useEffect  from "react"
 import Action from "../../redux/action/Action";
 import { Link } from "react-router-dom";
-export const ShopByCategory = ({ sidebar, setSidebar }) => {
-  
-
-  
+export const ShopByCategory = ({ sidebar, setSidebar }) => {  
   return (
     <ShopByCategorySection
       left={sidebar ? "0%" : "-100%"}

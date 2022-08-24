@@ -6,7 +6,7 @@ import BodyContainer from '../container/bodyContainer/BodyContainer'
 const Homepage = () => {
   return (
     <div>
-          <Header />
+      <Header />
       <BodyContainer />
       <Footer />
     </div>

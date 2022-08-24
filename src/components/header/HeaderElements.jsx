@@ -344,21 +344,7 @@ export const Nav = styled.nav`
     }
   }
 
-  .user-onlogin {
-    > i {
-      background-position: 80.77331923961296% 79.36961843872733% !important;
-    }
-    :hover {
-      color: #4a4a4a !important;
-      background-color: #84c225;
-      .arrow-down {
-        top: 0;
-        transform: rotate(-135deg);
-      }
-
-      .user-option {
-        display: flex;
-      }
+  
 
       @media screen and (max-width: 870px) {
         .user-option {

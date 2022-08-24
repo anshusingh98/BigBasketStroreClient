@@ -1,5 +1,4 @@
-import { Alert, Snackbar } from "@mui/material";
-import react , {useState} from "react";
+import   {useState} from "react";
 import {Nav} from "./HeaderElements"
 import {ArrowDown} from "./HeaderElements"
 import React from 'react'
@@ -13,7 +12,7 @@ const Header = () => {
     <div> <>
     <div>
     <Nav className="nav-sticky">
-      <div>
+      <div > 
         <div>
           <div>
             <div className="hamburger" onClick={() => setSidebar(!sidebar)}>
