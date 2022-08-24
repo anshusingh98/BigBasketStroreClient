@@ -1,8 +1,13 @@
 import ActionTypes from "../action/ActionTypes";
 
+
+
 const CartReducer = (state = [], { type, payload }) => {
   switch (type) {
     case ActionTypes.ADD_TO_BASKET:
+     
+          localStorage.setItem("products", JSON.stringify([...state, payload]))
+    
       return [...state, payload];
 
     case ActionTypes.REMOVE_FROM_BASKET:
@@ -10,6 +15,10 @@ const CartReducer = (state = [], { type, payload }) => {
       state[findIndex]["quantity"] = 1;
       return state.filter((item) => item._id !== payload);
 
+      case ActionTypes.EMPTY_BASKET:
+        state.map((el) => (el["quantity"] = 1));
+        return (state = []);
+        
     case ActionTypes.INC_QUANTITY:
       const itemIndex = state.findIndex((el) => el._id === payload);
 
@@ -25,9 +34,7 @@ const CartReducer = (state = [], { type, payload }) => {
       } else {
         return state.filter((item) => item._id !== payload);
       }
-    case ActionTypes.EMPTY_BASKET:
-      state.map((el) => (el["quantity"] = 1));
-      return (state = []);
+  
     default:
       return state;
   }

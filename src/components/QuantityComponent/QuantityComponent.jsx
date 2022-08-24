@@ -6,8 +6,8 @@ import "./QuantityComponent.css";
 const QuantityComponent = (prop) => {
   const [qyt, setQyt] = useState(prop.quantity);
   const dispatch = useDispatch();
-  
-  return (
+if(qyt===0){prop.setBasketItem(false);}
+return (
     <div className="change-qty">
       <div
         onClick={() => {

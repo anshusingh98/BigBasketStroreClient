@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket } from "../../redux/action/Action";
-import FetchProduct from "../../services/FetchProduct";
+import QuantityComponent from "../QuantityComponent/QuantityComponent";
 import "./Card.css";
 
 const Card = ({ product }) => {
@@ -14,7 +14,6 @@ const Card = ({ product }) => {
     addedtocart = false;
   }
   const [basketItem, setBasketItem] = useState(addedtocart);
-
   return (
     <>
       <div className="product-card">
@@ -44,7 +43,7 @@ const Card = ({ product }) => {
 
         <p>{product.productName}</p>
 
-        <p>1 kg</p>
+        <p>{product.QtyPieceForOneElement}</p>
 
         <div className="price-box">
           <p style={{ margin: "0px", fontSize: "12px" }}>
@@ -55,20 +54,15 @@ const Card = ({ product }) => {
             <i
               style={{ fontSize: "20px", color: "grey" }}
               className="fa-solid fa-truck truck"
-            ></i>{" "}
+            ></i>
+           
             <p style={{ fontSize: "9px", margin: "0px 0px 0px 3px" }}>
-              standard Delivery: Today 9:00AM - 11:00AM
+             {product.Date}
             </p>
           </div>
           <div className="add-box my-1">
-            {basketItem ? (
-              <button
-                type="button"
-                className="btn btn-sm"
-                style={{ backgroundColor: "#f7d779" }}
-              >
-                Added
-              </button>
+            { basketItem ? (
+              <QuantityComponent  id={product._id} quantity={product.quantity} basketItem={basketItem}  setBasketItem={setBasketItem}/>
             ) : (
               <div className="add-box my-1">
                 <div className="initial-quantity">
@@ -79,19 +73,20 @@ const Card = ({ product }) => {
                     <p>{product.quantity}</p>
                   </div>
                 </div>
-                <div
-                  onClick={() => {
-                    setBasketItem(true);
-                    dispatch(addToBasket(product));
-                  }}
-                  className="add-button"
-                >
-                  <p>ADD</p>
-                  <i
-                    style={{ color: "grey" }}
-                    className="fa-solid fa-basket-shopping"
-                  ></i>
-                </div>
+              <div
+                onClick={() => {
+                  setBasketItem(true);
+                  dispatch(addToBasket(product));
+                }}
+                className="add-button"
+              >
+                
+                <p>ADD</p>
+                <i
+                  style={{ color: "grey" }}
+                  className="fa-solid fa-basket-shopping"
+                ></i>
+              </div>
               </div>
             )}
           </div>

@@ -48,12 +48,16 @@ export const addToBasket = (basketItem) => {
       payload: id,
     };
   };
-  
+ 
+
+
   export const emptyBasket = () => {
     return {
       type: ActionTypes.EMPTY_BASKET,
     };
   };
+
+
 
 export default {
     productLoadStart,
@@ -61,4 +65,5 @@ export default {
     productLoadError,
     setCategory,
     fetchcart,
+    
 };
